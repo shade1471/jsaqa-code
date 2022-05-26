@@ -19,7 +19,6 @@ test("Should to try log in not valid user", async ({ page }) => {
     await page.fill("[placeholder='Пароль']", "wrongPassword");
     await page.screenshot({ path: "Screenshots/not_Succesful2.png" });
     await page.click('[data-testid="login-submit-btn"]');
-    //await page.screenshot({ path: "Screenshots/not_Succesful3.png" });
     await expect(page.locator("[data-testid='login-error-hint']")).toHaveText(
         "Вы ввели неправильно логин или пароль"
     );
