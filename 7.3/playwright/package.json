@@ -5,23 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright",
-<<<<<<< HEAD
-    "prettier": "prettier"
-=======
     "prettier": "prettier",
     "eslint": "eslint"
->>>>>>> 0199cdc9d48c6fa5cbbb94459ff61d3dcb6cdb98
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.12.3",
     "playwright": "^1.12.3",
-<<<<<<< HEAD
-    "prettier": "^2.6.2"
-=======
     "prettier": "^2.6.2",
     "eslint":"^8.15.0"
->>>>>>> 0199cdc9d48c6fa5cbbb94459ff61d3dcb6cdb98
   }
 }
