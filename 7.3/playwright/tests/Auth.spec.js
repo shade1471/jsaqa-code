@@ -1,5 +1,6 @@
+const userData = require("../user.js");
 const { test, expect } = require("@playwright/test");
-let userData = require("../user.js");
+test.setTimeout(120000);
 
 test("Should log in successfully", async ({ page }) => {
     await page.goto("https://netology.ru/?modal=sign_in");

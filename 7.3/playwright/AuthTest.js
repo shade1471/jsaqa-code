@@ -1,7 +1,6 @@
 const { expect } = require("@playwright/test");
 const { chromium } = require("playwright");
 let userData = require("./user.js");
-
 (async () => {
     const browser = await chromium.launch({
         headless: false,
