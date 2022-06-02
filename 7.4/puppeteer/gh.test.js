@@ -1,14 +1,17 @@
 let page;
 
+beforeEach(async () => {
+    page = await browser.newPage();
+});
+
+afterEach(() => {
+    page.close();
+});
+
 describe("Github page tests", () => {
     beforeEach(async () => {
-        page = await browser.newPage();
         await page.goto("https://github.com/team");
     }, 15000);
-
-    afterEach(() => {
-        page.close();
-    });
 
     test("The h1 header content'", async () => {
         const firstLink = await page.$("header div div a");
@@ -36,14 +39,6 @@ describe("Github page tests", () => {
 });
 
 describe("Should check titles for pages", () => {
-    beforeEach(async () => {
-        page = await browser.newPage();
-    });
-
-    afterEach(() => {
-        page.close();
-    });
-
     test("Check Title Enterprise", async () => {
         await page.goto("https://github.com/enterprise");
         const title = await page.title();

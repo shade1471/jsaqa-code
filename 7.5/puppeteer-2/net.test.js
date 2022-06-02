@@ -29,7 +29,7 @@ describe("Netology.ru tests", () => {
     await pageList.waitForSelector("h1");
   });
 
-  test("The first link text 'Медиа Нетологии'", async () => {
+  test.only("The first link text 'Медиа Нетологии'", async () => {
     const actual = await getText(page, "header a + a");
     expect(actual).toContain("Медиа Нетологии");
   });
